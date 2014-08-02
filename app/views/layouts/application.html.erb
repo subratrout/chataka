@@ -2,16 +2,15 @@
 <html>
 <head>
   <title>Chataka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-    <%= link_to "Home", root_path %>
-    <%= link_to "About", about_path %>
-    <%= link_to "FAQ", faq_path %>
-
-<%= yield %>
-
-</body>
+  <body>
+    <div class = "container">
+      <%= render 'layouts/header' %>
+      <%= yield %>
+    </div>
+  </body>
 </html>
