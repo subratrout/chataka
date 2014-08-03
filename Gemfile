@@ -44,6 +44,8 @@ group :production do
 end
 
 gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 
 
 # Use ActiveModel has_secure_password
