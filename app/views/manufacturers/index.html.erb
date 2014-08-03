@@ -1,0 +1,63 @@
+<h1>Listing manufacturers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Manufacturer name</th>
+      <th>Brand name</th>
+      <th>Street1</th>
+      <th>Street2</th>
+      <th>Post office</th>
+      <th>City</th>
+      <th>Dist</th>
+      <th>State</th>
+      <th>Pin</th>
+      <th>Mobile</th>
+      <th>Cml no</th>
+      <th>Valid date</th>
+      <th>Operative status</th>
+      <th>Bottle 20liters</th>
+      <th>Bottle 2liters</th>
+      <th>Bottle 1liter</th>
+      <th>Bottle 500ml</th>
+      <th>Email</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @manufacturers.each do |manufacturer| %>
+      <tr>
+        <td><%= manufacturer.manufacturer_name %></td>
+        <td><%= manufacturer.brand_name %></td>
+        <td><%= manufacturer.street1 %></td>
+        <td><%= manufacturer.street2 %></td>
+        <td><%= manufacturer.post_office %></td>
+        <td><%= manufacturer.city %></td>
+        <td><%= manufacturer.dist %></td>
+        <td><%= manufacturer.state %></td>
+        <td><%= manufacturer.pin %></td>
+        <td><%= manufacturer.mobile %></td>
+        <td><%= manufacturer.cml_no %></td>
+        <td><%= manufacturer.valid_date %></td>
+        <td><%= manufacturer.operative_status %></td>
+        <td><%= manufacturer.bottle_20liters %></td>
+        <td><%= manufacturer.bottle_2liters %></td>
+        <td><%= manufacturer.bottle_1liter %></td>
+        <td><%= manufacturer.bottle_500ml %></td>
+        <td><%= manufacturer.email %></td>
+        <td><%= manufacturer.description %></td>
+        <td><%= link_to 'Show', manufacturer %></td>
+        <td><%= link_to 'Edit', edit_manufacturer_path(manufacturer) %></td>
+        <td><%= link_to 'Destroy', manufacturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Manufacturer', new_manufacturer_path %>

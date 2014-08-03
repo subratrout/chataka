@@ -1,0 +1,93 @@
+<%= form_for(@manufacturer) do |f| %>
+  <% if @manufacturer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@manufacturer.errors.count, "error") %> prohibited this manufacturer from being saved:</h2>
+
+      <ul>
+      <% @manufacturer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :manufacturer_name %><br>
+    <%= f.text_field :manufacturer_name %>
+  </div>
+  <div class="field">
+    <%= f.label :brand_name %><br>
+    <%= f.text_field :brand_name %>
+  </div>
+  <div class="field">
+    <%= f.label :street1 %><br>
+    <%= f.text_field :street1 %>
+  </div>
+  <div class="field">
+    <%= f.label :street2 %><br>
+    <%= f.text_area :street2 %>
+  </div>
+  <div class="field">
+    <%= f.label :post_office %><br>
+    <%= f.text_area :post_office %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :dist %><br>
+    <%= f.text_field :dist %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :pin %><br>
+    <%= f.text_area :pin %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile %><br>
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :cml_no %><br>
+    <%= f.text_field :cml_no %>
+  </div>
+  <div class="field">
+    <%= f.label :valid_date %><br>
+    <%= f.date_select :valid_date %>
+  </div>
+  <div class="field">
+    <%= f.label :operative_status %><br>
+    <%= f.check_box :operative_status %>
+  </div>
+  <div class="field">
+    <%= f.label :bottle_20liters %><br>
+    <%= f.check_box :bottle_20liters %>
+  </div>
+  <div class="field">
+    <%= f.label :bottle_2liters %><br>
+    <%= f.check_box :bottle_2liters %>
+  </div>
+  <div class="field">
+    <%= f.label :bottle_1liter %><br>
+    <%= f.check_box :bottle_1liter %>
+  </div>
+  <div class="field">
+    <%= f.label :bottle_500ml %><br>
+    <%= f.check_box :bottle_500ml %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

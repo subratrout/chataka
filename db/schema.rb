@@ -11,7 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140802091559) do
+ActiveRecord::Schema.define(version: 20140803184029) do
+
+  create_table "manufacturers", force: true do |t|
+    t.string   "manufacturer_name"
+    t.string   "brand_name"
+    t.text     "street1"
+    t.text     "street2"
+    t.text     "post_office"
+    t.string   "city"
+    t.string   "dist"
+    t.string   "state"
+    t.text     "pin"
+    t.string   "mobile"
+    t.string   "cml_no"
+    t.date     "valid_date"
+    t.boolean  "operative_status"
+    t.boolean  "bottle_20liters"
+    t.boolean  "bottle_2liters"
+    t.boolean  "bottle_1liter"
+    t.boolean  "bottle_500ml"
+    t.string   "email"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "manufacturers", ["brand_name"], name: "index_manufacturers_on_brand_name"
+  add_index "manufacturers", ["city"], name: "index_manufacturers_on_city"
+  add_index "manufacturers", ["cml_no"], name: "index_manufacturers_on_cml_no"
+  add_index "manufacturers", ["description"], name: "index_manufacturers_on_description"
+  add_index "manufacturers", ["dist"], name: "index_manufacturers_on_dist"
+  add_index "manufacturers", ["email"], name: "index_manufacturers_on_email"
+  add_index "manufacturers", ["manufacturer_name"], name: "index_manufacturers_on_manufacturer_name"
+  add_index "manufacturers", ["mobile"], name: "index_manufacturers_on_mobile"
+  add_index "manufacturers", ["pin"], name: "index_manufacturers_on_pin"
+  add_index "manufacturers", ["post_office"], name: "index_manufacturers_on_post_office"
+  add_index "manufacturers", ["state"], name: "index_manufacturers_on_state"
+  add_index "manufacturers", ["street1"], name: "index_manufacturers_on_street1"
+  add_index "manufacturers", ["street2"], name: "index_manufacturers_on_street2"
+  add_index "manufacturers", ["valid_date"], name: "index_manufacturers_on_valid_date"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

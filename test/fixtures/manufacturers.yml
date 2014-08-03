@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manufacturer_name: MyString
+  brand_name: MyString
+  street1: 
+  street2: MyText
+  post_office: MyText
+  city: MyString
+  dist: MyString
+  state: MyString
+  pin: MyText
+  mobile: MyString
+  cml_no: MyString
+  valid_date: 2014-08-03
+  operative_status: false
+  bottle_20liters: false
+  bottle_2liters: false
+  bottle_1liter: false
+  bottle_500ml: false
+  email: MyString
+  description: MyText
+
+two:
+  manufacturer_name: MyString
+  brand_name: MyString
+  street1: 
+  street2: MyText
+  post_office: MyText
+  city: MyString
+  dist: MyString
+  state: MyString
+  pin: MyText
+  mobile: MyString
+  cml_no: MyString
+  valid_date: 2014-08-03
+  operative_status: false
+  bottle_20liters: false
+  bottle_2liters: false
+  bottle_1liter: false
+  bottle_500ml: false
+  email: MyString
+  description: MyText
