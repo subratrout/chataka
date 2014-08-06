@@ -22,9 +22,9 @@
       <th>Bottle 500ml</th>
       <th>Email</th>
       <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Address</th>
     </tr>
   </thead>
 
@@ -50,6 +50,9 @@
         <td><%= manufacturer.bottle_500ml %></td>
         <td><%= manufacturer.email %></td>
         <td><%= manufacturer.description %></td>
+        <td><%= manufacturer.latitude %></td>
+        <td><%= manufacturer.longitude %></td>
+        <td><%= manufacturer.address %></td>
         <td><%= link_to 'Show', manufacturer %></td>
         <td><%= link_to 'Edit', edit_manufacturer_path(manufacturer) %></td>
         <td><%= link_to 'Destroy', manufacturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

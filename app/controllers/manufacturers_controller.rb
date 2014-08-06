@@ -10,6 +10,12 @@ class ManufacturersController < ApplicationController
   # GET /manufacturers/1
   # GET /manufacturers/1.json
   def show
+
+      @hash = Gmaps4rails.build_markers(@manufacturer) do |manufacturer, marker|
+      marker.lat manufacturer.latitude
+      marker.lng manufacturer.longitude
+
+    end
   end
 
   # GET /manufacturers/new
@@ -69,6 +75,6 @@ class ManufacturersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def manufacturer_params
-      params.require(:manufacturer).permit(:manufacturer_name, :brand_name, :street1, :street2, :post_office, :city, :dist, :state, :pin, :mobile, :cml_no, :valid_date, :operative_status, :bottle_20liters, :bottle_2liters, :bottle_1liter, :bottle_500ml, :email, :description)
+      params.require(:manufacturer).permit(:manufacturer_name, :brand_name, :street1, :street2, :post_office, :city, :dist, :state, :pin, :mobile, :cml_no, :valid_date, :operative_status, :bottle_20liters, :bottle_2liters, :bottle_1liter, :bottle_500ml, :email, :description, :latitude, :longitude, :address)
     end
 end

@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140803210329) do
+ActiveRecord::Schema.define(version: 20140806042200) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -24,9 +27,9 @@ ActiveRecord::Schema.define(version: 20140803210329) do
     t.datetime "updated_at"
   end
 
-  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
-  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
+  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
   create_table "admin_users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -43,8 +46,8 @@ ActiveRecord::Schema.define(version: 20140803210329) do
     t.datetime "updated_at"
   end
 
-  add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
-  add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
+  add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "manufacturers", force: true do |t|
     t.string   "manufacturer_name"
@@ -68,22 +71,25 @@ ActiveRecord::Schema.define(version: 20140803210329) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "address"
   end
 
-  add_index "manufacturers", ["brand_name"], name: "index_manufacturers_on_brand_name"
-  add_index "manufacturers", ["city"], name: "index_manufacturers_on_city"
-  add_index "manufacturers", ["cml_no"], name: "index_manufacturers_on_cml_no"
-  add_index "manufacturers", ["description"], name: "index_manufacturers_on_description"
-  add_index "manufacturers", ["dist"], name: "index_manufacturers_on_dist"
-  add_index "manufacturers", ["email"], name: "index_manufacturers_on_email"
-  add_index "manufacturers", ["manufacturer_name"], name: "index_manufacturers_on_manufacturer_name"
-  add_index "manufacturers", ["mobile"], name: "index_manufacturers_on_mobile"
-  add_index "manufacturers", ["pin"], name: "index_manufacturers_on_pin"
-  add_index "manufacturers", ["post_office"], name: "index_manufacturers_on_post_office"
-  add_index "manufacturers", ["state"], name: "index_manufacturers_on_state"
-  add_index "manufacturers", ["street1"], name: "index_manufacturers_on_street1"
-  add_index "manufacturers", ["street2"], name: "index_manufacturers_on_street2"
-  add_index "manufacturers", ["valid_date"], name: "index_manufacturers_on_valid_date"
+  add_index "manufacturers", ["brand_name"], name: "index_manufacturers_on_brand_name", using: :btree
+  add_index "manufacturers", ["city"], name: "index_manufacturers_on_city", using: :btree
+  add_index "manufacturers", ["cml_no"], name: "index_manufacturers_on_cml_no", using: :btree
+  add_index "manufacturers", ["description"], name: "index_manufacturers_on_description", using: :btree
+  add_index "manufacturers", ["dist"], name: "index_manufacturers_on_dist", using: :btree
+  add_index "manufacturers", ["email"], name: "index_manufacturers_on_email", using: :btree
+  add_index "manufacturers", ["manufacturer_name"], name: "index_manufacturers_on_manufacturer_name", using: :btree
+  add_index "manufacturers", ["mobile"], name: "index_manufacturers_on_mobile", using: :btree
+  add_index "manufacturers", ["pin"], name: "index_manufacturers_on_pin", using: :btree
+  add_index "manufacturers", ["post_office"], name: "index_manufacturers_on_post_office", using: :btree
+  add_index "manufacturers", ["state"], name: "index_manufacturers_on_state", using: :btree
+  add_index "manufacturers", ["street1"], name: "index_manufacturers_on_street1", using: :btree
+  add_index "manufacturers", ["street2"], name: "index_manufacturers_on_street2", using: :btree
+  add_index "manufacturers", ["valid_date"], name: "index_manufacturers_on_valid_date", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -100,7 +106,7 @@ ActiveRecord::Schema.define(version: 20140803210329) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

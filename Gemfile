@@ -45,7 +45,8 @@ end
 
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
-
+gem 'geocoder'
+gem 'gmaps4rails'
 
 
 # Use ActiveModel has_secure_password
