@@ -1,6 +1,5 @@
 class ManufacturersController < ApplicationController
   before_action :set_manufacturer, only: [:show, :edit, :update, :destroy]
-
   # GET /manufacturers
   # GET /manufacturers.json
   def index

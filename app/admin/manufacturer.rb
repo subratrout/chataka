@@ -14,5 +14,4 @@ ActiveAdmin.register Manufacturer do
   #  permitted
   # end
 
-
 end

@@ -55,7 +55,7 @@
 </p>
 
 <p>
-  <strong>Cml no:</strong>
+  <strong>CML no:</strong>
   <%= @manufacturer.cml_no %>
 </p>
 
@@ -66,27 +66,27 @@
 
 <p>
   <strong>Operative status:</strong>
-  <%= @manufacturer.operative_status %>
+  <%= boolean_to_words(@manufacturer.operative_status) %>
 </p>
 
 <p>
   <strong>Bottle 20liters:</strong>
-  <%= @manufacturer.bottle_20liters %>
+  <%= boolean_to_words(@manufacturer.bottle_20liters) %>
 </p>
 
 <p>
   <strong>Bottle 2liters:</strong>
-  <%= @manufacturer.bottle_2liters %>
+  <%= boolean_to_words(@manufacturer.bottle_2liters) %>
 </p>
 
 <p>
   <strong>Bottle 1liter:</strong>
-  <%= @manufacturer.bottle_1liter %>
+  <%= boolean_to_words(@manufacturer.bottle_1liter) %>
 </p>
 
 <p>
   <strong>Bottle 500ml:</strong>
-  <%= @manufacturer.bottle_500ml %>
+  <%= boolean_to_words(@manufacturer.bottle_500ml) %>
 </p>
 
 <p>
