@@ -1,0 +1,213 @@
+<%= form_for(@water_quality) do |f| %>
+  <% if @water_quality.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@water_quality.errors.count, "error") %> prohibited this water_quality from being saved:</h2>
+
+      <ul>
+      <% @water_quality.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :address1 %><br>
+    <%= f.text_field :address1 %>
+  </div>
+  <div class="field">
+    <%= f.label :address2 %><br>
+    <%= f.text_field :address2 %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br>
+    <%= f.text_field :place %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :test_year %><br>
+    <%= f.text_field :test_year %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br>
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :source_type %><br>
+    <%= f.text_field :source_type %>
+  </div>
+  <div class="field">
+    <%= f.label :source_owner %><br>
+    <%= f.text_field :source_owner %>
+  </div>
+  <div class="field">
+    <%= f.label :color_hazen_unit %><br>
+    <%= f.text_field :color_hazen_unit %>
+  </div>
+  <div class="field">
+    <%= f.label :odor %><br>
+    <%= f.text_field :odor %>
+  </div>
+  <div class="field">
+    <%= f.label :taste %><br>
+    <%= f.text_field :taste %>
+  </div>
+  <div class="field">
+    <%= f.label :turbidity %><br>
+    <%= f.text_field :turbidity %>
+  </div>
+  <div class="field">
+    <%= f.label :ph_value %><br>
+    <%= f.text_field :ph_value %>
+  </div>
+  <div class="field">
+    <%= f.label :total_hardness %><br>
+    <%= f.text_field :total_hardness %>
+  </div>
+  <div class="field">
+    <%= f.label :iron %><br>
+    <%= f.text_field :iron %>
+  </div>
+  <div class="field">
+    <%= f.label :chloride %><br>
+    <%= f.text_field :chloride %>
+  </div>
+  <div class="field">
+    <%= f.label :residual_free_chlorine %><br>
+    <%= f.text_field :residual_free_chlorine %>
+  </div>
+  <div class="field">
+    <%= f.label :fluoride %><br>
+    <%= f.text_field :fluoride %>
+  </div>
+  <div class="field">
+    <%= f.label :total_dissolved_solids %><br>
+    <%= f.text_field :total_dissolved_solids %>
+  </div>
+  <div class="field">
+    <%= f.label :calcium %><br>
+    <%= f.text_field :calcium %>
+  </div>
+  <div class="field">
+    <%= f.label :magnesium %><br>
+    <%= f.text_field :magnesium %>
+  </div>
+  <div class="field">
+    <%= f.label :copper %><br>
+    <%= f.text_field :copper %>
+  </div>
+  <div class="field">
+    <%= f.label :manganese %><br>
+    <%= f.text_field :manganese %>
+  </div>
+  <div class="field">
+    <%= f.label :sulphate %><br>
+    <%= f.text_field :sulphate %>
+  </div>
+  <div class="field">
+    <%= f.label :nitrate %><br>
+    <%= f.text_field :nitrate %>
+  </div>
+  <div class="field">
+    <%= f.label :phenolic_compounds %><br>
+    <%= f.text_field :phenolic_compounds %>
+  </div>
+  <div class="field">
+    <%= f.label :mercury %><br>
+    <%= f.text_field :mercury %>
+  </div>
+  <div class="field">
+    <%= f.label :cadmium %><br>
+    <%= f.text_field :cadmium %>
+  </div>
+  <div class="field">
+    <%= f.label :selenium %><br>
+    <%= f.text_field :selenium %>
+  </div>
+  <div class="field">
+    <%= f.label :arsenic %><br>
+    <%= f.text_field :arsenic %>
+  </div>
+  <div class="field">
+    <%= f.label :cyanide %><br>
+    <%= f.text_field :cyanide %>
+  </div>
+  <div class="field">
+    <%= f.label :lead %><br>
+    <%= f.text_field :lead %>
+  </div>
+  <div class="field">
+    <%= f.label :zinc %><br>
+    <%= f.text_field :zinc %>
+  </div>
+  <div class="field">
+    <%= f.label :sodium %><br>
+    <%= f.text_field :sodium %>
+  </div>
+  <div class="field">
+    <%= f.label :potassium %><br>
+    <%= f.text_field :potassium %>
+  </div>
+  <div class="field">
+    <%= f.label :hexavalent_chromium %><br>
+    <%= f.text_field :hexavalent_chromium %>
+  </div>
+  <div class="field">
+    <%= f.label :alkalinity %><br>
+    <%= f.text_field :alkalinity %>
+  </div>
+  <div class="field">
+    <%= f.label :pesticides %><br>
+    <%= f.text_field :pesticides %>
+  </div>
+  <div class="field">
+    <%= f.label :detergent %><br>
+    <%= f.text_field :detergent %>
+  </div>
+  <div class="field">
+    <%= f.label :mineral_oil %><br>
+    <%= f.text_field :mineral_oil %>
+  </div>
+  <div class="field">
+    <%= f.label :electrical_conductivity %><br>
+    <%= f.text_field :electrical_conductivity %>
+  </div>
+  <div class="field">
+    <%= f.label :dissolved_oxygen %><br>
+    <%= f.text_field :dissolved_oxygen %>
+  </div>
+  <div class="field">
+    <%= f.label :biological_oxygen_demand %><br>
+    <%= f.text_field :biological_oxygen_demand %>
+  </div>
+  <div class="field">
+    <%= f.label :chemical_oxygen_demand %><br>
+    <%= f.text_field :chemical_oxygen_demand %>
+  </div>
+  <div class="field">
+    <%= f.label :coliform %><br>
+    <%= f.text_field :coliform %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

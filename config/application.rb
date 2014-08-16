@@ -23,5 +23,8 @@ module Chataka
     config.assets.initialize_on_precompile = false
 
     I18n.enforce_available_locales = true
+
+    # To generate full controller command
+    config.app_generators.scaffold_controller = :scaffold_controller
   end
 end

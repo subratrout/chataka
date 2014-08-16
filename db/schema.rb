@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140806042200) do
+ActiveRecord::Schema.define(version: 20140816075958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,5 +108,72 @@ ActiveRecord::Schema.define(version: 20140806042200) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "water_qualities", force: true do |t|
+    t.string   "city"
+    t.string   "state"
+    t.string   "address"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "place"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "test_year"
+    t.string   "source"
+    t.string   "source_type"
+    t.string   "source_owner"
+    t.string   "color_hazen_unit"
+    t.string   "odor"
+    t.string   "taste"
+    t.string   "turbidity"
+    t.string   "ph_value"
+    t.string   "total_hardness"
+    t.string   "iron"
+    t.string   "chloride"
+    t.string   "residual_free_chlorine"
+    t.string   "fluoride"
+    t.string   "total_dissolved_solids"
+    t.string   "calcium"
+    t.string   "magnesium"
+    t.string   "copper"
+    t.string   "manganese"
+    t.string   "sulphate"
+    t.string   "nitrate"
+    t.string   "phenolic_compounds"
+    t.string   "mercury"
+    t.string   "cadmium"
+    t.string   "selenium"
+    t.string   "arsenic"
+    t.string   "cyanide"
+    t.string   "lead"
+    t.string   "zinc"
+    t.string   "sodium"
+    t.string   "potassium"
+    t.string   "hexavalent_chromium"
+    t.string   "alkalinity"
+    t.string   "pesticides"
+    t.string   "detergent"
+    t.string   "mineral_oil"
+    t.string   "electrical_conductivity"
+    t.string   "dissolved_oxygen"
+    t.string   "biological_oxygen_demand"
+    t.string   "chemical_oxygen_demand"
+    t.string   "coliform"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "water_qualities", ["address"], name: "index_water_qualities_on_address", using: :btree
+  add_index "water_qualities", ["address1"], name: "index_water_qualities_on_address1", using: :btree
+  add_index "water_qualities", ["address2"], name: "index_water_qualities_on_address2", using: :btree
+  add_index "water_qualities", ["city"], name: "index_water_qualities_on_city", using: :btree
+  add_index "water_qualities", ["latitude"], name: "index_water_qualities_on_latitude", using: :btree
+  add_index "water_qualities", ["longitude"], name: "index_water_qualities_on_longitude", using: :btree
+  add_index "water_qualities", ["place"], name: "index_water_qualities_on_place", using: :btree
+  add_index "water_qualities", ["source"], name: "index_water_qualities_on_source", using: :btree
+  add_index "water_qualities", ["source_owner"], name: "index_water_qualities_on_source_owner", using: :btree
+  add_index "water_qualities", ["source_type"], name: "index_water_qualities_on_source_type", using: :btree
+  add_index "water_qualities", ["state"], name: "index_water_qualities_on_state", using: :btree
+  add_index "water_qualities", ["test_year"], name: "index_water_qualities_on_test_year", using: :btree
 
 end

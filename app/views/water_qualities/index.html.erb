@@ -1,0 +1,123 @@
+<h1>Listing water_qualities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>State</th>
+      <th>Address</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>Place</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Test year</th>
+      <th>Source</th>
+      <th>Source type</th>
+      <th>Source owner</th>
+      <th>Color hazen unit</th>
+      <th>Odor</th>
+      <th>Taste</th>
+      <th>Turbidity</th>
+      <th>Ph value</th>
+      <th>Total hardness</th>
+      <th>Iron</th>
+      <th>Chloride</th>
+      <th>Residual free chlorine</th>
+      <th>Fluoride</th>
+      <th>Total dissolved solids</th>
+      <th>Calcium</th>
+      <th>Magnesium</th>
+      <th>Copper</th>
+      <th>Manganese</th>
+      <th>Sulphate</th>
+      <th>Nitrate</th>
+      <th>Phenolic compounds</th>
+      <th>Mercury</th>
+      <th>Cadmium</th>
+      <th>Selenium</th>
+      <th>Arsenic</th>
+      <th>Cyanide</th>
+      <th>Lead</th>
+      <th>Zinc</th>
+      <th>Sodium</th>
+      <th>Potassium</th>
+      <th>Hexavalent chromium</th>
+      <th>Alkalinity</th>
+      <th>Pesticides</th>
+      <th>Detergent</th>
+      <th>Mineral oil</th>
+      <th>Electrical conductivity</th>
+      <th>Dissolved oxygen</th>
+      <th>Biological oxygen demand</th>
+      <th>Chemical oxygen demand</th>
+      <th>Coliform</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @water_qualities.each do |water_quality| %>
+      <tr>
+        <td><%= water_quality.city %></td>
+        <td><%= water_quality.state %></td>
+        <td><%= water_quality.address %></td>
+        <td><%= water_quality.address1 %></td>
+        <td><%= water_quality.address2 %></td>
+        <td><%= water_quality.place %></td>
+        <td><%= water_quality.latitude %></td>
+        <td><%= water_quality.longitude %></td>
+        <td><%= water_quality.test_year %></td>
+        <td><%= water_quality.source %></td>
+        <td><%= water_quality.source_type %></td>
+        <td><%= water_quality.source_owner %></td>
+        <td><%= water_quality.color_hazen_unit %></td>
+        <td><%= water_quality.odor %></td>
+        <td><%= water_quality.taste %></td>
+        <td><%= water_quality.turbidity %></td>
+        <td><%= water_quality.ph_value %></td>
+        <td><%= water_quality.total_hardness %></td>
+        <td><%= water_quality.iron %></td>
+        <td><%= water_quality.chloride %></td>
+        <td><%= water_quality.residual_free_chlorine %></td>
+        <td><%= water_quality.fluoride %></td>
+        <td><%= water_quality.total_dissolved_solids %></td>
+        <td><%= water_quality.calcium %></td>
+        <td><%= water_quality.magnesium %></td>
+        <td><%= water_quality.copper %></td>
+        <td><%= water_quality.manganese %></td>
+        <td><%= water_quality.sulphate %></td>
+        <td><%= water_quality.nitrate %></td>
+        <td><%= water_quality.phenolic_compounds %></td>
+        <td><%= water_quality.mercury %></td>
+        <td><%= water_quality.cadmium %></td>
+        <td><%= water_quality.selenium %></td>
+        <td><%= water_quality.arsenic %></td>
+        <td><%= water_quality.cyanide %></td>
+        <td><%= water_quality.lead %></td>
+        <td><%= water_quality.zinc %></td>
+        <td><%= water_quality.sodium %></td>
+        <td><%= water_quality.potassium %></td>
+        <td><%= water_quality.hexavalent_chromium %></td>
+        <td><%= water_quality.alkalinity %></td>
+        <td><%= water_quality.pesticides %></td>
+        <td><%= water_quality.detergent %></td>
+        <td><%= water_quality.mineral_oil %></td>
+        <td><%= water_quality.electrical_conductivity %></td>
+        <td><%= water_quality.dissolved_oxygen %></td>
+        <td><%= water_quality.biological_oxygen_demand %></td>
+        <td><%= water_quality.chemical_oxygen_demand %></td>
+        <td><%= water_quality.coliform %></td>
+        <td><%= link_to 'Show', water_quality %></td>
+        <td><%= link_to 'Edit', edit_water_quality_path(water_quality) %></td>
+        <td><%= link_to 'Destroy', water_quality, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Water quality', new_water_quality_path %>
