@@ -10,6 +10,7 @@ Chataka::Application.routes.draw do
   get "about" => "pages#about"
   get "faq" => "pages#faq"
   get "tos" => "pages#tos"
+  get "contact" => "pages#contact"
   get "privacy" => "pages#privacy"
 
   get "pages/home"
