@@ -16,4 +16,7 @@
 //= require turbolinks
 //= require underscore
 //= require gmaps/google
+//= require flexslider
+//= require index-slider
+//= require theme.js
 //= require_tree .

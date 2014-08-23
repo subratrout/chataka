@@ -12,6 +12,7 @@ Chataka::Application.routes.draw do
   get "tos" => "pages#tos"
   get "contact" => "pages#contact"
   get "privacy" => "pages#privacy"
+  get "pricing" => "pages#pricing"
 
   get "pages/home"
 

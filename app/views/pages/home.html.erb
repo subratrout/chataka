@@ -1,11 +1,151 @@
-<div class="jumbotron center">
-  <h1>Welcome to Chataka!</h1>
-   <% if user_signed_in? %>
-          # do something
-     <% else %>
-       <p>
-         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
-         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-       </p>
-  <% end %>
+<div class="container">
+     <section id="feature_slider" class="lol">
+
+    </section>
+
+    <div id="showcase">
+        <div class="container">
+            <div class="section_header">
+                <h3>Our Services</h3>
+            </div>
+            <div class="row feature_wrapper">
+                <!-- Features Row -->
+                <div class="features_op1_row">
+                    <!-- Feature -->
+                    <div class="col-sm-4 feature first">
+                        <div class="img_box">
+                            <a href="services.html">
+                                <img src="/assets/service1.png">
+                                <span class="circle">
+                                    <span class="plus">&#43;</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h6>Waterlyze: “Water + Analyze”</h6>
+                            <p>
+                               Rest assured with periodic on-site testing of drinking water at your home or office  premises
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature -->
+                    <div class="col-sm-4 feature">
+                        <div class="img_box">
+                            <a href="services.html">
+                                <img src="/assets/service2.png">
+                                <span class="circle">
+                                    <span class="plus">&#43;</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h6>No BS, only BIS</h6>
+                            <p>
+                                Validate BIS licensing status of your packaged water supplier instantly from our website. Demand quality water!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Feature -->
+                    <div class="col-sm-4 feature last">
+                        <div class="img_box">
+                            <a href="services.html">
+                                <img src="/assets/service3.png">
+                                <span class="circle">
+                                    <span class="plus">&#43;</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="text">
+                            <h6>Get the Chataka App</h6>
+                            <p>
+                                Do you feel strongly about water quality ?  Download and Contribute to the Chataka water quality map for your city.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="features">
+        <div class="container">
+            <div class="section_header">
+                <h3>Features</h3>
+            </div>
+            <div class="row feature">
+                <div class="col-sm-6">
+                    <img src="/assets/showcase1.png" class="img-responsive" />
+                </div>
+                <div class="col-sm-6 info">
+                    <h3>
+                        <img src="/assets/features-ico1.png" />
+                        Knowing Your Water!
+                    </h3>
+                    <p>
+                        How clean is the water that you are drinking everyday? Is it safe for your kids? We test your drinking water for presence of any contamination so that you will be careful and healthy.
+                    </p>
+                </div>
+            </div>
+            <div class="row feature">
+                <div class="col-sm-6 pic-right">
+                    <img src="/assets/showcase2.png" class="pull-right img-responsive" />
+                </div>
+                <div class="col-sm-6 info info-left">
+                    <h3>
+                        <img src="/assets/features-ico2.png" />
+                        Knowing Your Environment!
+                    </h3>
+                    <p>
+                        How clear is the water of the lake near your house? Or how clean is the water in your office? Know the quality of water in your surrounding. It is important for a sustainable life.
+                    </p>
+                </div>
+            </div>
+            <div class="row feature">
+                <div class="col-sm-6">
+                    <img src="/assets/showcase3.png" class="img-responsive" />
+                </div>
+                <div class="col-sm-6 info">
+                    <h3>
+                        <img src="/assets/features-ico3.png" />
+                        Choose to Make Difference!
+                    </h3>
+                    <p>
+                        Create Awareness. Empower people. Stop disease burden. And that is only possible by knowing the quality and purity of water in our ecosystem.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="clients">
+        <div class="container">
+            <div class="section_header">
+                <h3>Our Happy Customers</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-4 ">
+                    <img src="/assets/client1.png" />
+                    <p>S. N. Srinivasan: </p>
+                    <p>I am very happy with the service from InstaWater. </p>
+                </div>
+                <div class="col-md-3 col-sm-4 client">
+                    <img src="/assets/client1.png" />
+                    <p>S. N. Srinivasan: </p>
+                    <p>I am very happy with the service from InstaWater. </p>
+                </div>
+                <div class="col-md-3 col-sm-4 client">
+                    <img src="/assets/client1.png" />
+                    <p>S. N. Srinivasan: </p>
+                    <p>I am very happy with the service from InstaWater. </p>
+                </div>
+                <div class="col-md-3 col-sm-4 client">
+                    <img src="/assets/client1.png" />
+                    <p>S. N. Srinivasan: </p>
+                    <p>I am very happy with the service from InstaWater. </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </div>
