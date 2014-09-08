@@ -26,5 +26,7 @@ module Chataka
 
     # To generate full controller command
     config.app_generators.scaffold_controller = :scaffold_controller
+    # To add font path
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
